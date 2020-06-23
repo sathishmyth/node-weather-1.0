@@ -19,7 +19,18 @@ hbs.registerPartials(parDir);
 
 app.get("", (req, res) => {
     res.render("index");
-})
+});
+
+app.get("/weather", (req, res) => {
+    if(!req.query.loc) {
+        return res.send({error: 'Please provide the location'});
+    }
+
+    utils.weatherAPI(req.query.loc, (err, data) => {
+        res.send({err, data});
+    })
+
+});
 
 app.listen(port, () => console.log(`Server port ${port} started...`));
 

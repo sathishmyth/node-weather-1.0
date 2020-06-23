@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
 </head>
 <body>
     {{>header}}
     <div class="main">
         <form>
-            <input type="text" placeholder="Enter Location">
+            <input type="text" placeholder="Enter Location" id="loc_search">
             <input type="submit" value="SUBMIT">
         </form>
     </div>
+    <div class="info">
+        <p id="msg"></p>
+    </div>
     {{>footer}}
+    <script src="js/script.js"></script>
 </body>
 </html>
