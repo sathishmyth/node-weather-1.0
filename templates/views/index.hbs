@@ -9,13 +9,15 @@
 <body>
     {{>header}}
     <div class="main">
-        <form>
-            <input type="text" placeholder="Enter Location" id="loc_search">
-            <input type="submit" value="SUBMIT">
-        </form>
-    </div>
-    <div class="info">
-        <p id="msg"></p>
+        <div class="form">
+            <form>
+                <input type="text" placeholder="Enter Location" id="loc_search">
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div><br>
+        <div class="info">
+            <p id="msg"></p>
+        </div>
     </div>
     {{>footer}}
     <script src="js/script.js"></script>
